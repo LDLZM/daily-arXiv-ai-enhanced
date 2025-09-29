@@ -56,6 +56,11 @@ jobs:
         
         echo "crawl_date=$today" >> $GITHUB_OUTPUT
         echo "爬取完成 / Crawling completed"
+
+    - name: check
+      id: check
+      run: |
+        echo "！！！${{ vars.CATEGORIES }}"
         
     - name: Check for duplicates
       id: dedup_check
